@@ -1,44 +1,51 @@
 html,
 body {
-    height: 100%;
     margin: 0;
+    height: 50vh;
+    box-sizing: border-box;
+
 }
 
-/* use viewport-relative units to cover page fully */
 body {
-  
-    height: 100%;
-    
+ 
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(150px,2);
-  grid-template-rows: repeat(150px,4);
-  
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 200px);
+
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.lowerlist {
-    margin-top: 20px;
-}
 
-.side-bar {
-    grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end:1;
-  
-    background-color:#8b5cf6;
-}
 
+.sidebar {
+    background-color: lightcoral;
+    grid-row: 1/5;
+}
 
 .header {
-background-color: #5cf685;
-grid-column-start: 2;
-grid-column-end: 8;
-grid-row-start: 1;
-  grid-row-end:2;
+    background-color: lightgreen;
+    grid-column: 2/5;
+}
 
+.main {
+    box-sizing: border-box;
+    background-color: lightsteelblue;
+    grid-row-end: span 3;
+    grid-column-end: span 3;
+    display: grid;
+    grid-template-columns: 450px 450px 300px;
+    grid-template-rows: 330px 330px 330px;
+    gap: 30px;
+
+}
+
+.main>.page {
+    background-color: #d2e93a;
+    margin: 20px;
+ 
+}
+.page3, .page6 {
+    background-color: #d2e93a;
+    margin: 20px;
+    
 }
