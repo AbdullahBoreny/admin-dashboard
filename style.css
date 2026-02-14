@@ -1,83 +1,65 @@
+@import url("reset.css");
+.root div {
+  padding: 15px;
+}
+.root {
+  background-color: aqua;
+  display: grid;
+  overflow: auto;
+  height: 100vh;
+  gap: 5px;
+  grid-template-columns: 1fr 5fr;
+}
 
-html,body {
-    margin :0;
-    height: 100vh;
+.header {
+  grid-column: 2 /3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: darkgoldenrod;
+}
+.left {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 
-.container {
-    display:grid;
-    height: 100vh;
-     grid-template-columns: 0.2fr 1fr;
-     
-     grid-template-rows: 0.5fr 1fr 1fr 1fr;
-      grid-template-areas:
-        "sidebar header header header"
-        "sidebar main main main"
-        "sidebar main main main"
-        "sidebar main main main"
-       
-     
-        
-        
-        
-        
-        
-        
-  }
+
+.right-nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   
-  #sidebar {
-    background:blue;
-    grid-area:sidebar;
-  }
-  #header {
-    background:lime;
-    grid-area:header;
-  }
-  .main {
-     grid-area:main;
-    background:orange;
-    display:grid;
-    
-    gap:10px;
-    grid-template-columns: repeat(4,300px);
-     grid-template-rows: repeat(4,200px);
-     grid-template-areas:
-       "page1 page2 page7"
-       "page3 page4 ."
-       "page5 page6 page8"
-       
-  }
-  .page1 {
-    background:black;
-    grid-area:page1;
-  }
-  .page2 {
-    background:black;
-    grid-area:page2;
-  }
-  .page3 {
-    grid-area:page3;
-    background:black;
-  }
-  .page4 {
-    grid-area:page4;
-    background:black;
-  }
-  .page5 {
-    grid-area:page5;
-    background:black;
-  }
-  .page6 {
-    grid-area:page6;
-    background:black;
-  }
-  .page7 {
-    grid-area:page7;
-    background:black;
-  }
-  .page8 {
-    grid-area:page8;
-    background:black;
-  }
-  
+}
+.left-nav {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.content {
+  grid-column: 2 /3;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: palevioletred;
+}
+.card {
+  height: 100px;
+}
+.sidebar {
+  display: grid;
+  grid-row: 1 /  4;
+  grid-column: 1 /2;
+  grid-template-columns: 1fr 1fr;
+  background-color: brown;
+}
+
+
+
+ul,
+ol {
+  list-style-type: none;
+}
